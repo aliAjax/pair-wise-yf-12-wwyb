@@ -251,10 +251,273 @@ textarea {
   padding: 32px 12px;
 }
 
+/* 区域页签 */
+.toolbar-top {
+  margin-bottom: 16px;
+}
+
+.area-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  background: #fff;
+  color: #445069;
+  border: 1px solid #cfd8e5;
+  border-radius: 999px;
+  padding: 8px 16px;
+}
+
+.tab.active {
+  background: #176b87;
+  border-color: #176b87;
+  color: #fff;
+}
+
+/* 顶部统计 */
+.metric.alert strong {
+  color: #c84b31;
+}
+
+/* 工作区与地图 */
+.map-panel {
+  padding: 12px;
+  display: flex;
+}
+
+.map-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 460px;
+}
+
+.map-canvas {
+  flex: 1;
+  min-height: 420px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #dfe7f1;
+}
+
+.map-hint {
+  margin: 0;
+  font-size: 12px;
+  color: #5b667a;
+}
+
+.map-cursor {
+  margin: 0;
+  font-size: 12px;
+  color: #176b87;
+  font-variant-numeric: tabular-nums;
+}
+
+.station-pin {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(23, 32, 51, .35);
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.station-pin span {
+  transform: rotate(45deg);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.pin-normal { background: #176b87; }
+.pin-urgent { background: #c84b31; }
+.pin-closed { background: #94a0b2; }
+
+.pin-active {
+  box-shadow: 0 0 0 4px rgba(23, 107, 135, .25), 0 1px 4px rgba(23, 32, 51, .35);
+}
+
+.picked-pin {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 3px solid #176b87;
+  background: rgba(23, 107, 135, .18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.picked-core {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #176b87;
+}
+
+.leaflet-tooltip {
+  font-size: 12px;
+  border: 1px solid #cfd8e5;
+}
+
+/* 表单补充 */
+.coord-box {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  border: 1px dashed #b8c6d8;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #f4f8fc;
+  font-size: 13px;
+  color: #176b87;
+  font-variant-numeric: tabular-nums;
+}
+
+.coord-empty {
+  color: #93a1b6;
+}
+
+.form-error {
+  margin: 0;
+  color: #c84b31;
+  font-size: 13px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+button.ghost {
+  background: transparent;
+  color: #5b667a;
+  border: 1px dashed #cfd8e5;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.archived-banner {
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #fdf3e7;
+  color: #9a5b13;
+  font-size: 13px;
+}
+
+/* 列表标记 */
+.record {
+  cursor: pointer;
+  position: relative;
+}
+
+.record.selected {
+  border-color: #176b87;
+  box-shadow: 0 0 0 2px rgba(23, 107, 135, .15);
+}
+
+.record.urgent {
+  border-left: 4px solid #c84b31;
+}
+
+.record.closed {
+  opacity: .82;
+  background: #f4f6f9;
+}
+
+.area-no {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: #e3eef5;
+  color: #176b87;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.badge {
+  border-radius: 999px;
+  padding: 6px 9px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.badge-ok {
+  background: #e8f4ef;
+  color: #14724f;
+}
+
+.badge-urgent {
+  background: #fbe6e0;
+  color: #c84b31;
+  font-weight: 700;
+}
+
+.badge-closed {
+  background: #e7ebf1;
+  color: #66758c;
+}
+
+.closed-note {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: #7b879c;
+}
+
+.list-legend {
+  margin: 0;
+  font-size: 12px;
+  color: #7b879c;
+}
+
+/* 旧档留档 */
+.archive {
+  margin-top: 18px;
+  border-top: 1px dashed #cfd8e5;
+  padding-top: 14px;
+}
+
+.archive h3 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  color: #9a5b13;
+}
+
+.archive-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid #f0dec6;
+  background: #fdf8f0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.archive-meta {
+  display: block;
+  margin-top: 4px;
+  color: #8a7a64;
+  font-size: 12px;
+}
+
 @media (max-width: 860px) {
   .app { padding: 18px; }
   .topbar, .workspace { grid-template-columns: 1fr; }
   .stack { justify-content: flex-start; }
   .metrics { grid-template-columns: 1fr; }
   .details { grid-template-columns: 1fr; }
+  .map-canvas { min-height: 320px; }
 }
